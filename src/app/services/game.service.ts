@@ -7,7 +7,7 @@ import { GamesStore } from '../session/game-store';
   providedIn: 'root'
 })
 export class GameService {
-
+  
   constructor(private gameStore: GamesStore, private GameQuery: GameQuery) {}
 
   public create(game: Game) {
@@ -24,6 +24,10 @@ export class GameService {
 
   public getAll() {
     return this.GameQuery.getAll();
+  }
+
+  public get(id) {
+    return this.GameQuery.getEntity(id);
   }
 
   public clear() {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Game, createGame } from './../model/game';
-import { StoreConfig, EntityState, EntityStore, transaction } from '@datorama/akita';
+import { StoreConfig, EntityState, EntityStore, transaction, ID } from '@datorama/akita';
 
 export interface GameState extends EntityState<Game> {}
 
@@ -9,6 +9,7 @@ export interface GameState extends EntityState<Game> {}
   providedIn: 'root'
 })
 export class GamesStore extends EntityStore<GameState, Game> {
+
   constructor() {
     super();
     this.initializeGames();

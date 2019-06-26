@@ -3,7 +3,7 @@
 <table>
     <tr *ngFor="let game of games">
         <td> {{game.title}} </td>
-        <td> <button> Edit </button> </td>
+        <td> <a routerLink="/view/{{game.id}}"> View </a></td>
         <td> <button (click)= "onDelete(game)"> Delete </button> </td>
         <td> <button> Add to basket </button> </td>
     </tr>
