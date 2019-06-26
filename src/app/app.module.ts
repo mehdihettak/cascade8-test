@@ -7,6 +7,8 @@ import { GameListComponent } from './pages/game-list/game-list.component';
 import { GameInfoComponent } from './pages/game-info/game-info.component';
 import { GameCreateComponent } from './pages/game-create/game-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GamesStore } from './session/game-store';
+import { GameQuery } from './session/game-query';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [GamesStore, GameQuery],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

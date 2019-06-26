@@ -1,7 +1,7 @@
 <form [formGroup]='gameFormGroup'>
   <div>
     <label> Title </label>
-    <input formControlName="title">
+    <input formControlName="title"/>
   </div>
 
   <div>
@@ -11,16 +11,16 @@
 
   <div>
     <label> Type </label>
-    <select formControlName="title">
+    <select formControlName="type">
       <option value="Action">Action</option>
-      <option value="Action">Adventure</option>
-      <option value="Action">RPG</option>
-      <option value="Action">Strategy</option>
+      <option value="Adventure">Adventure</option>
+      <option value="RPG">RPG</option>
+      <option value="Strategy">Strategy</option>
     </select>
   </div>
 
   <div>
-    <label> Description </label>
+    <label> Image Url </label>
     <input formControlName="imageUrl">
   </div>
 
@@ -28,5 +28,6 @@
     <label> Release date </label>
     <input type="date" formControlName="releaseDate">
   </div>
-  
+
+  <button type="submit" (click)="onSubmit()"> Submit </button>
 </form>
