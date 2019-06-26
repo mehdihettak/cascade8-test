@@ -1,5 +1,6 @@
 import { ID } from '@datorama/akita';
 
+let id = 1;
 
 export class Game {
     id: ID;
@@ -8,4 +9,12 @@ export class Game {
     imageUrl: string;
     type: string;
     releaseDate: Date;
+}
+
+export function createGame(): Game {
+    let game = new Game();
+    game.id =  id;
+    id++;
+
+    return game;
 }

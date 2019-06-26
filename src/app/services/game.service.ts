@@ -1,4 +1,3 @@
-import { GameQuery } from './../session/game-query';
 import { GameQuery } from '../session/game-query';
 import { Game } from '../model/game';
 import { Injectable } from '@angular/core';
@@ -26,6 +25,8 @@ export class GameService {
   public getAll() {
     return this.GameQuery.getAll();
   }
-  ]
- 
+
+  public clear() {
+    return this.gameStore.reset();
+  }
 }

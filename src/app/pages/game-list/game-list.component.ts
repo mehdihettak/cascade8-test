@@ -1,3 +1,5 @@
+import { GameQuery } from './../../session/game-query';
+import { GameService } from './../../services/game.service';
 import { Game } from './../../model/game';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,21 +12,17 @@ export class GameListComponent implements OnInit {
 
   games: Game[];
 
-  constructor() {
-    let game1 = new Game();
-    game1.title = "Final Fantasy";
-    game1.type = "RPG";
-
-    let game2 = new Game();
-    game2.title = "GTA";
-    game2.type = "Action";
-
-    this.games = new Array();
-    this.games.push(game1);
-    this.games.push(game2);
-   }
+  constructor(private gameService: GameService) {
+    //this.gameService.clear();
+    this.games = gameService.getAll();
+  }
 
   ngOnInit() {
   }
 
+  onDelete(game: Game) {
+    this.gameService.delete(game);
+    const i = this.games.indexOf(game);
+    this.games.splice(i, 1);
+  }
 }

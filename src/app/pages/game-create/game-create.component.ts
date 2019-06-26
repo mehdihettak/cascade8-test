@@ -1,4 +1,4 @@
-import { Game } from './../../model/game';
+import { Game, createGame } from './../../model/game';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { GameService } from 'src/app/services/game.service';
@@ -11,8 +11,9 @@ import { GameService } from 'src/app/services/game.service';
 export class GameCreateComponent implements OnInit {
 
   gameFormGroup: FormGroup;
-  
-  constructor(private formBuilder: FormBuilder, private gameService: GameService) {
+  game: Game;
+
+  constructor(private formBuilder: FormBuilder, private gameService: GameService) {    
     this.gameFormGroup = this.formBuilder.group({
       title: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
@@ -26,7 +27,7 @@ export class GameCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    let game = new Game();
+    let game = createGame();
     let values = this.gameFormGroup.value;
 
     game.title = values['title'];
@@ -36,6 +37,8 @@ export class GameCreateComponent implements OnInit {
     game.releaseDate = values['releaseDate'];
 
     this.gameService.create(game);
+    console.log(game);
+
   }
 
 }
