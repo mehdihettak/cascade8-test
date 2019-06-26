@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GameListComponent } from './pages/game-list/game-list.component';
 import { GameInfoComponent } from './pages/game-info/game-info.component';
 import { GameCreateComponent } from './pages/game-create/game-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GameCreateComponent } from './pages/game-create/game-create.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

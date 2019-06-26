@@ -1,3 +1,11 @@
 <h2> Game List </h2>
 
-<app-game-info *ngFor="let game of games" [game]="game"></app-game-info>
+<table>
+    <tr *ngFor="let game of games">
+        <td> {{game.title}} </td>
+        <td> <button> Edit </button> </td>
+        <td> <button> Delete </button> </td>
+        <td> <button> Add to basket </button> </td>
+    </tr>
+    
+</table>

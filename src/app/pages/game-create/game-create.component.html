@@ -1,3 +1,32 @@
-<p>
-  game-create works!
-</p>
+<form [formGroup]='gameFormGroup'>
+  <div>
+    <label> Title </label>
+    <input formControlName="title">
+  </div>
+
+  <div>
+    <label> Description </label>
+    <textarea formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <label> Type </label>
+    <select formControlName="title">
+      <option value="Action">Action</option>
+      <option value="Action">Adventure</option>
+      <option value="Action">RPG</option>
+      <option value="Action">Strategy</option>
+    </select>
+  </div>
+
+  <div>
+    <label> Description </label>
+    <input formControlName="imageUrl">
+  </div>
+
+  <div>
+    <label> Release date </label>
+    <input type="date" formControlName="releaseDate">
+  </div>
+  
+</form>
