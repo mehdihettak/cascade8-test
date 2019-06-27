@@ -1,14 +1,17 @@
-<h3> {{game.title}} </h3>
 
-<h4> Description </h4>
-<p> {{game.description}} </p>
 
-<h4> Type </h4>
-<p> {{game.type}} </p>
+<mat-card style = "width: 70%; margin: auto;">
+    <mat-card-title> {{game.title}} </mat-card-title>
+    <mat-card-subtitle> {{game.type}} - {{game.releaseDate | date:'dd/MM/yyyy'}} </mat-card-subtitle>
+    <img mat-card-image src={{game.imageUrl}} style="display: block; margin: auto; height: 400px; width: 250px"/>
+    <mat-card-content> 
+        <br>
+        {{ game.description }} 
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onEdit()">Edit</button>
+    </mat-card-actions>
+</mat-card>
 
-<h4> Release Date: </h4>
-<p> {{game.releaseDate}} </p>
 
-<img src={{game.imageUrl}}/>
 
-<button (click)="onEdit()">Edit</button>

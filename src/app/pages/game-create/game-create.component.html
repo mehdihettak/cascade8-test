@@ -1,21 +1,21 @@
 <form [formGroup]='gameFormGroup'>
   
     <div>
-      <mat-form-field>
-        <mat-label>Title</mat-label>
+      <mat-form-field class="custom-field">
+        <mat-label >Title</mat-label>
         <input  matInput  placeholder="Title" formControlName="title"  name="title"  required>
       </mat-form-field>
     </div>
     
     <div>
-      <mat-form-field>
+      <mat-form-field class="custom-field">
           <mat-label>Description</mat-label>
           <textarea matInput formControlName="description" ></textarea>
       </mat-form-field>
     </div>
 
     <div>
-      <mat-form-field>
+      <mat-form-field class="custom-field">
         <mat-label> Type </mat-label>
         <mat-select formControlName="type" placeholder="Select">
           <mat-option value="Action">Action</mat-option>
@@ -27,7 +27,7 @@
     </div>
 
     <div>
-      <mat-form-field>
+      <mat-form-field class="custom-field">
         <mat-label>Image Url</mat-label>
         <input matInput formControlName="imageUrl"/>
       </mat-form-field>
@@ -35,7 +35,7 @@
 
     <div>
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Release Date">
+        <input matInput [matDatepicker]="picker" placeholder="Release Date" formControlName='releaseDate'>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>

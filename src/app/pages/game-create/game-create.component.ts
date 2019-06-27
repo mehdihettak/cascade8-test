@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Game, createGame } from './../../model/game';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
@@ -15,7 +15,9 @@ export class GameCreateComponent implements OnInit {
   id;
   game: Game;
   isUpdate: boolean = false;
-  constructor(private formBuilder: FormBuilder, private gameService: GameService, private activatedRoute: ActivatedRoute) { 
+  constructor(private formBuilder: FormBuilder, private gameService: GameService, 
+    private activatedRoute: ActivatedRoute, private router: Router) { 
+
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     if (this.id != null) {
       this.game = this.gameService.get(this.id);
@@ -37,21 +39,26 @@ export class GameCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    let values = this.gameFormGroup.value;
-    console.log(values);
-    let game = new Game();
-    game.title = values['title'];
-    game.description = values['description'];
-    game.type = values['type'];
-    game.imageUrl = values['imageUrl'];
-    game.releaseDate = values['releaseDate'];
-    game.id = this.id;
-    
-    if(this.isUpdate) {
-      this.gameService.update(this.game);
-    }
-    console.log(game);
+    if (this.gameFormGroup.valid) {
+      let values = this.gameFormGroup.value;
+      let game = new Game();
+      game.title = values['title'];
+      game.description = values['description'];
+      game.type = values['type'];
+      game.imageUrl = values['imageUrl'];
+      game.releaseDate = values['releaseDate'];
+      game.id = this.id;
 
+      if(this.isUpdate) {
+        this.gameService.update(game);
+        console.log(game);
+      }
+      else {
+        this.gameService.create(game);
+      }
+
+      this.router.navigate(['/']);
+    }
   }
 
 }

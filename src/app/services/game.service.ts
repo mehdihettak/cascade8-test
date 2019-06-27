@@ -10,7 +10,7 @@ export class GameService {
   
   constructor(private gameStore: GamesStore, private GameQuery: GameQuery) {}
 
-  public createOrUpdate(game: Game) {
+  public create(game: Game) {
     this.gameStore.add(game);
   }
 
