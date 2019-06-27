@@ -19,8 +19,6 @@ export class Game {
     }
 }
 
-
-
 export function createGame(): Game {
     let game = new Game();
     game.id =  id;

@@ -8,6 +8,8 @@ import { GamesStore, GameState } from './game-store';
   providedIn: 'root'
 })
 export class GameQuery extends QueryEntity<GameState, Game> {
+  all$ = this.selectAll();
+
   constructor(protected store: GamesStore) {
     super(store);
   }

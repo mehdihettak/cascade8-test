@@ -13,22 +13,23 @@ export class GameListComponent implements OnInit {
 
   games: Game[];
   dataSource;
-  displayedColumns: string[] = ['id', 'title', 'view', 'delete'];
+  displayedColumns: string[] = ['title', 'view', 'delete'];
 
   constructor(private gameService: GameService) {
-    //this.gameService.clear();
-    this.games = gameService.getAll();
-    this.dataSource = new MatTableDataSource<Game>(this.games);
-
+  
   }
-
+  
   ngOnInit() {
+    
+    this.gameService.getAll().subscribe(games => {
+      this.games = games;
+     
+      this.dataSource = new MatTableDataSource<Game>(this.games);
+    });
   }
 
   onDelete(game: Game) {
     this.gameService.delete(game);
-    const i = this.games.indexOf(game);
-    this.games.splice(i, 1);
-    this.dataSource = new MatTableDataSource<Game>(this.games);
+   
   }
 }

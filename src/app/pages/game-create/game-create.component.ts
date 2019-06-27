@@ -17,7 +17,9 @@ export class GameCreateComponent implements OnInit {
   isUpdate: boolean = false;
   constructor(private formBuilder: FormBuilder, private gameService: GameService, 
     private activatedRoute: ActivatedRoute, private router: Router) { 
+   }
 
+  ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     if (this.id != null) {
       this.game = this.gameService.get(this.id);
@@ -33,32 +35,26 @@ export class GameCreateComponent implements OnInit {
       imageUrl: new FormControl(this.game.imageUrl, Validators.required),
       releaseDate: new FormControl(this.game.releaseDate, Validators.required)
     });
-   }
-
-  ngOnInit() {
   }
 
   onSubmit() {
+    
     if (this.gameFormGroup.valid) {
       let values = this.gameFormGroup.value;
-      let game = new Game();
-      game.title = values['title'];
-      game.description = values['description'];
-      game.type = values['type'];
-      game.imageUrl = values['imageUrl'];
-      game.releaseDate = values['releaseDate'];
-      game.id = this.id;
+      values.id = this.game.id;
 
       if(this.isUpdate) {
-        this.gameService.update(game);
-        console.log(game);
+        
+        this.gameService.update(values);
       }
       else {
-        this.gameService.create(game);
+        this.gameService.create(values);
       }
 
       this.router.navigate(['/']);
     }
+
+    this.gameFormGroup.reset();
   }
 
 }
