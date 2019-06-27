@@ -9,7 +9,17 @@ export class Game {
     imageUrl: string;
     type: string;
     releaseDate: Date;
+
+    constructor() {
+        this.title = '';
+        this.description = '';
+        this.imageUrl = '';
+        this.type = '';
+        this.releaseDate = new Date();
+    }
 }
+
+
 
 export function createGame(): Game {
     let game = new Game();

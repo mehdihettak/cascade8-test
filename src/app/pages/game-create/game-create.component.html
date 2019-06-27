@@ -1,33 +1,49 @@
 <form [formGroup]='gameFormGroup'>
-  <div>
-    <label> Title </label>
-    <input formControlName="title"/>
-  </div>
+  
+    <div>
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input  matInput  placeholder="Title" formControlName="title"  name="title"  required>
+      </mat-form-field>
+    </div>
+    
+    <div>
+      <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" ></textarea>
+      </mat-form-field>
+    </div>
 
-  <div>
-    <label> Description </label>
-    <textarea formControlName="description"></textarea>
-  </div>
+    <div>
+      <mat-form-field>
+        <mat-label> Type </mat-label>
+        <mat-select formControlName="type" placeholder="Select">
+          <mat-option value="Action">Action</mat-option>
+          <mat-option value="Adventure">Adventure</mat-option>
+          <mat-option value="RPG">RPG</mat-option>
+          <mat-option value="Strategy">Strategy</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
-  <div>
-    <label> Type </label>
-    <select formControlName="type">
-      <option value="Action">Action</option>
-      <option value="Adventure">Adventure</option>
-      <option value="RPG">RPG</option>
-      <option value="Strategy">Strategy</option>
-    </select>
-  </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Image Url</mat-label>
+        <input matInput formControlName="imageUrl"/>
+      </mat-form-field>
+    </div>
 
-  <div>
-    <label> Image Url </label>
-    <input formControlName="imageUrl">
-  </div>
+    <div>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Release Date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
 
-  <div>
-    <label> Release date </label>
-    <input type="date" formControlName="releaseDate">
-  </div>
-
-  <button type="submit" (click)="onSubmit()"> Submit </button>
+  <button mat-raised-button color="primary" type="submit" (click)="onSubmit()"> Submit </button>
 </form>
+
+
+
+

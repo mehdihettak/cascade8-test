@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class GameListComponent implements OnInit {
 
   games: Game[];
+  displayedColumns: string[] = ['id', 'title', 'view', 'delete'];
 
   constructor(private gameService: GameService) {
     //this.gameService.clear();

@@ -7,7 +7,14 @@ import { GameListComponent } from './pages/game-list/game-list.component';
 import { GameInfoComponent } from './pages/game-info/game-info.component';
 import { GameCreateComponent } from './pages/game-create/game-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GamesStore } from './session/game-store';
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule, MatCardModule,
+  MatFormFieldModule, MatCheckboxModule, MatDatepickerModule,
+  MatRadioModule, MatSelectModule, MatInputModule, MatNativeDateModule} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +26,23 @@ import { GamesStore } from './session/game-store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatTableModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

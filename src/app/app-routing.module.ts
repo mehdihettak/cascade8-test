@@ -8,7 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', component: GameListComponent },
   { path: 'view/:id', component: GameInfoComponent},
-  { path: 'create', component: GameCreateComponent}
+  { path: 'create', component: GameCreateComponent},
+  { path: 'edit/:id', component: GameCreateComponent}
 ];
 
 @NgModule({
