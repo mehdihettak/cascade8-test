@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule, MatCardModule,
   MatFormFieldModule, MatCheckboxModule, MatDatepickerModule,
   MatRadioModule, MatSelectModule, MatInputModule, MatNativeDateModule} from '@angular/material';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatButtonModule, MatCardModule,
     AppComponent,
     GameListComponent,
     GameInfoComponent,
-    GameCreateComponent
+    GameCreateComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
