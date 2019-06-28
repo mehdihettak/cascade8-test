@@ -15,6 +15,9 @@ import { MatButtonModule, MatCardModule,
   MatFormFieldModule, MatCheckboxModule, MatDatepickerModule,
   MatRadioModule, MatSelectModule, MatInputModule, MatNativeDateModule} from '@angular/material';
 import { CartComponent } from './cart/cart.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import { CartComponent } from './cart/cart.component';
     GameListComponent,
     GameInfoComponent,
     GameCreateComponent,
-    CartComponent
+    CartComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,9 @@ import { CartComponent } from './cart/cart.component';
     MatRadioModule,
     MatSelectModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MDBBootstrapModule.forRoot(),
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
