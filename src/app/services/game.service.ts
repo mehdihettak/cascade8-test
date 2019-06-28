@@ -27,7 +27,6 @@ export class GameService {
   //for remove a game on list 
 
   public delete(game: Game) {
-    console.log(game)
     this.gameStore.remove(game.id);
   }
 
