@@ -1,12 +1,16 @@
-<mat-sidenav-container>
-    <mat-sidenav opened mode="side">  
-        <button mat-button  color="primary" routerLink="/create"> Create Game </button> <br>
-        <button mat-button color="primary" routerLink="/"> Game list </button>
-    </mat-sidenav>
-    <mat-sidenav-content opened mode="side" position="end">
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
-  
-
-
+<app-navbar></app-navbar>
+<app-header></app-header>
+<router-outlet></router-outlet>
+<div class="row" style="width: 30%">
+    <div class="aligne">
+        <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect c> Create Game
+        </button>
+    </div>
+    <div class="aligne">
+        <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect routerLink="/"> Game List </button>
+    </div>
+</div>
+<div class="container d-flex justify-content-end">
+    <img src="assets/mario.png" id="marioo" class="animated zoomIn delay-1s">
+</div>
+<app-footer></app-footer>

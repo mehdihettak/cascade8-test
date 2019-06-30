@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Original+Surfer&display=swap");
+
+h2 {
+  font-size: 40px;
+  // text-shadow: -1px -1px rgb(223, 28, 61), 1px 1px rgb(107, 1, 1), -3px 0 4px #000;
+  font-family: "Original Surfer", cursive;
+  color: rgb(245, 6, 6);
+  padding: 16px;
+  font-weight: lighter;
+  text-align: center;
+  display: block;
+  margin: 16px;
+  -webkit-filter: drop-shadow(5px 5px 5px black);
+  filter: drop-shadow(5px 5px 5px black);
+}

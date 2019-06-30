@@ -1,19 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameListComponent } from './pages/game-list/game-list.component';
 import { GameInfoComponent } from './pages/game-info/game-info.component';
 import { GameCreateComponent } from './pages/game-create/game-create.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatSidenavModule} from '@angular/material/sidenav';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
-import { MatButtonModule, MatCardModule,
+import {
+  MatButtonModule, MatCardModule,
   MatFormFieldModule, MatCheckboxModule, MatDatepickerModule,
-  MatRadioModule, MatSelectModule, MatInputModule, MatNativeDateModule} from '@angular/material';
+  MatRadioModule, MatSelectModule, MatInputModule, MatNativeDateModule
+} from '@angular/material';
+import { CartComponent } from './cart/cart.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { config } from 'rxjs';
 
 
 @NgModule({
@@ -21,7 +32,11 @@ import { MatButtonModule, MatCardModule,
     AppComponent,
     GameListComponent,
     GameInfoComponent,
-    GameCreateComponent
+    GameCreateComponent,
+    CartComponent,
+    NavbarComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +57,14 @@ import { MatButtonModule, MatCardModule,
     MatRadioModule,
     MatSelectModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MDBBootstrapModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
+    FormsModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
