@@ -9,6 +9,7 @@ export class Game {
     imageUrl: string;
     type: string;
     releaseDate: Date;
+    price: string;
 
     constructor() {
         this.title = '';
@@ -16,6 +17,7 @@ export class Game {
         this.imageUrl = '';
         this.type = '';
         this.releaseDate = new Date();
+        this.price='';
     }
 }
 
