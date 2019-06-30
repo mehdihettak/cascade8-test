@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"
+                style="margin: auto; margin-bottom: 10px; width: 90%">
+
+                <!-- Title Column -->
+                <ng-container matColumnDef="title" style="width: 70%;">
+                    <th mat-header-cell *matHeaderCellDef style="font-size: 100%"> Title </th>
+                    <td mat-cell *matCellDef="let element" style="font-weight: bold"> {{element.title}} </td>
+                </ng-container>
+
+                <!-- Details Column -->
+                <ng-container matColumnDef="view" style="width: 15%">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let element">
+                        <a mat-button color="primary" routerLink="/view/{{element.id}}"> Details <mdb-icon fas
+                                icon="list-ul"></mdb-icon></a>
+                    </td>
+                </ng-container>
+
+                <!-- Delete Column -->
+                <ng-container matColumnDef="delete" style="width: 15%">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-button color="warn" (click)="onDelete(element)"> Delete <mdb-icon fas
+                                icon="times-circle"></mdb-icon></button>
+
+                        <button mat-button color="basics" routerLink="/cart" style="margin-left: 15%"> Buy
+                            <mdb-icon fas icon="shopping-cart"></mdb-icon></button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>
