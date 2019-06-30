@@ -20,6 +20,11 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { config } from 'rxjs';
 
 
 @NgModule({
@@ -55,7 +60,11 @@ import { HeaderComponent } from './header/header.component';
     MatNativeDateModule,
     MDBBootstrapModule.forRoot(),
     MDBBootstrapModule.forRoot(),
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
