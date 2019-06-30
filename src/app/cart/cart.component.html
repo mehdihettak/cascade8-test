@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-md-4">
     <!--Card-->
-    <mdb-card cascade="true" wider="true">
+    <mdb-card cascade="true" wider="true" class="card">
 
       <!--Card image-->
       <div class="view view-cascade overlay waves-light" mdbWavesEffect>
         <img class="card-img-top"
-          src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(2).jpg" alt="">
+          src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTI2MlbLwX3W8DEdEf2TEV99HXKjYqiL0PTduOT5QCQSklwKKs0k5n0vZ8mV5s8YyF2YKlVfQhTt8rjYoGThfsFg1aSTfLwFrYVwfTFcai6RSEmwrHr0vs4&usqp=CAc" alt="">
         <a>
           <div class="mask rgba-white-slight"></div>
         </a>
@@ -16,14 +16,13 @@
       <!--Card content-->
       <mdb-card-body cascade="true" class="text-center">
         <!--Category & Title-->
-        <h5>Shoes</h5>
+        <h5>Final fantasy</h5>
         <mdb-card-title>
-          <h4><strong><a href="">Product name</a></strong></h4>
+          <h4><strong><a href="">{{game.title}}</a></strong></h4>
         </mdb-card-title>
 
         <!--Description-->
-        <mdb-card-text>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
-          voluptates.</mdb-card-text>
+        <mdb-card-text>{{game.description}}.</mdb-card-text>
 
         <!--Card footer-->
         <mdb-card-footer>

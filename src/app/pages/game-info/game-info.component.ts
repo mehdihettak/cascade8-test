@@ -12,8 +12,7 @@ export class GameInfoComponent implements OnInit {
 
   game: Game;
 
-  constructor(private activatedRoute: ActivatedRoute, private gameService: GameService, private router: Router) { 
-  }
+  constructor(private activatedRoute: ActivatedRoute, private gameService: GameService, private router: Router) {}
   
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
