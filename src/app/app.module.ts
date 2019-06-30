@@ -64,7 +64,7 @@ import { config } from 'process';
     MDBBootstrapModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     FormsModule,
-    AngularFireModule.initializeApp(config),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
