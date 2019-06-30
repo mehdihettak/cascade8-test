@@ -1,6 +1,5 @@
 <div class="container">
     <div class="row">
-
         <mat-card style="width: 70%; margin: auto;">
             <mat-card-title> {{game.title}} </mat-card-title>
             <mat-card-subtitle> {{game.type}} - {{game.releaseDate | date:'dd/MM/yyyy'}} </mat-card-subtitle>
@@ -9,12 +8,11 @@
             <mat-card-content style="font-size: 130%">
                 <br>
                 {{ game.description }}
-                <br>
-                {{ game.price}}
             </mat-card-content>
             <mat-card-actions>
                 <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect
                     (click)="onEdit()">Edit</button>
+                    <div style="text-align: center;font-size: 50px">{{ game.price }}</div>
             </mat-card-actions>
         </mat-card>
     </div>

@@ -1,5 +1,4 @@
 import { MatTableDataSource } from '@angular/material';
-import { GameQuery } from './../../session/game-query';
 import { GameService } from './../../services/game.service';
 import { Game } from './../../model/game';
 import { Component, OnInit } from '@angular/core';
