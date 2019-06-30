@@ -1,3 +1,5 @@
+![alt text](/home/wild/Bureau/cascade8id/cascade8-test/src/assets/mario.png)
+
 # cascade8-test
 test technique candidature cascade8
 
