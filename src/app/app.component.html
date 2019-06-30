@@ -1,24 +1,16 @@
-
 <app-navbar></app-navbar>
+<app-header></app-header>
 <router-outlet></router-outlet>
-
-    <div class="row" style="width: 30%" >
-        
-        <div class="aligne">
-                <button mat-button  color="primary" routerLink="/create"> Create Game </button> 
-            </div>
-                
-
-         <div class="aligne">
-                <button mat-button color="primary" routerLink="/"> Game list </button>
-            </div>
-
+<div class="row" style="width: 30%">
+    <div class="aligne">
+        <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect routerLink="/create"> Create Game
+        </button>
     </div>
-    <div class="container d-flex justify-content-end">
-    <img src="assets/mario.png" class="marioo">
+    <div class="aligne">
+        <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect routerLink="/"> Game List </button>
     </div>
-
+</div>
+<div class="container d-flex justify-content-end">
+    <img src="assets/mario.png" id="marioo" class="animated zoomIn delay-1s">
+</div>
 <app-footer></app-footer>
-  
-
-

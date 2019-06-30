@@ -19,6 +19,8 @@ export class Game {
     }
 }
 
+// just for ID 1 final fantasy after i will take ID function uuid
+
 export function createGame(): Game {
     let game = new Game();
     game.id =  id;

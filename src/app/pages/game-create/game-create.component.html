@@ -1,19 +1,19 @@
 <div class="container">
-  
 
-<form [formGroup]='gameFormGroup'>
-  
+
+  <form [formGroup]='gameFormGroup'>
+
     <div>
       <mat-form-field class="custom-field">
-        <mat-label >Title</mat-label>
-        <input  matInput  placeholder="Title" formControlName="title"  name="title"  required>
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" formControlName="title" name="title" required>
       </mat-form-field>
     </div>
-    
+
     <div>
       <mat-form-field class="custom-field">
-          <mat-label>Description</mat-label>
-          <textarea matInput formControlName="description" ></textarea>
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
       </mat-form-field>
     </div>
 
@@ -32,7 +32,7 @@
     <div>
       <mat-form-field class="custom-field">
         <mat-label>Image Url</mat-label>
-        <input matInput formControlName="imageUrl"/>
+        <input matInput formControlName="imageUrl" />
       </mat-form-field>
     </div>
 
@@ -44,10 +44,8 @@
       </mat-form-field>
     </div>
 
-  <button mat-raised-button color="primary" type="submit" (click)="onSubmit()"> Submit </button>
-</form>
+    <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect type="submit" (click)="onSubmit()">
+      Submit </button>
+  </form>
 
 </div>
-
-
-
