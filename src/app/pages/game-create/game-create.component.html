@@ -1,6 +1,4 @@
 <div class="container">
-
-
   <form [formGroup]='gameFormGroup'>
 
     <div>
@@ -33,6 +31,13 @@
       <mat-form-field class="custom-field">
         <mat-label>Image Url</mat-label>
         <input matInput formControlName="imageUrl" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="custom-field">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Price" formControlName="Price" name="Price" required>
       </mat-form-field>
     </div>
 

@@ -33,7 +33,8 @@ export class GameCreateComponent implements OnInit {
       description: new FormControl(this.game.description, Validators.required),
       type: new FormControl(this.game.type, Validators.required),
       imageUrl: new FormControl(this.game.imageUrl, Validators.required),
-      releaseDate: new FormControl(this.game.releaseDate, Validators.required)
+      releaseDate: new FormControl(this.game.releaseDate, Validators.required),
+      price: new FormControl(this.game.price)
     });
   }
 

@@ -16,6 +16,7 @@ export class CartComponent implements OnInit {
   imageUrl: string;
   type: string;
   releaseDate: Date;
+  price: string;
 
   constructor(private activatedRoute: ActivatedRoute, private gameService: GameService, private router: Router) {
     this.title = '';
@@ -23,6 +24,8 @@ export class CartComponent implements OnInit {
         this.imageUrl = '';
         this.type = '';
         this.releaseDate = new Date();
+        this.price='';
+
   }
 
   ngOnInit() {

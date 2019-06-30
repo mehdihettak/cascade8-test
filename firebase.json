@@ -1,4 +1,6 @@
 {
+
+=======
   "hosting": {
     "public": "dist/testCascade8",
     "ignore": [
@@ -13,4 +15,4 @@
       }
     ]
   }
-}
+  
