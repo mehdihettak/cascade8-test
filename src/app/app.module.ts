@@ -24,7 +24,10 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { config } from 'rxjs';
+
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { config } from 'process';
 
 
 @NgModule({
@@ -64,7 +67,7 @@ import { config } from 'rxjs';
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule 
+    AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
   ],
   providers: [],
   bootstrap: [AppComponent]
