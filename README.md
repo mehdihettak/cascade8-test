@@ -1,5 +1,8 @@
 ![alt text](https://user-images.githubusercontent.com/48042853/60403061-8c23c700-9b98-11e9-9b56-6c17b849b148.png)
 
+site déployé sur: https://cascade8-test-812be.firebaseapp.com/
+En progressive web app PWA
+
 # cascade8-test
 test technique candidature cascade8
 
